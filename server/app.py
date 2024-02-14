@@ -184,7 +184,7 @@ query questionEditorData($titleSlug: String!) {
 
         #return render_template("index.html", question=result, title=title_slug, snippet = snippet_code)
     # If the question data is not found, return a 404 error
-@app.route('/dashboard', methods=['GET'])
+@app.route('/problemset', methods=['GET'])
 def display_question2():
 
     client_fetch_dash = GraphqlClient(endpoint="https://leetcode.com/graphql/")

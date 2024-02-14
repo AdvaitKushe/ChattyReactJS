@@ -7,10 +7,13 @@ import {
     Image,
     Box,
   } from "@chakra-ui/react";
+
+  import { Link } from "react-router-dom";
   
   import logo from "../Images/logo.png";
   import React, { useState, useEffect } from 'react';
   import { Fragment } from "react";
+import Dashboard from "./Dashboard";
   
   function Title() {
   
@@ -32,46 +35,10 @@ import {
       <Fragment>
         <Box h={"100vh"} bg="black">
           <Box w="70vw" h="5vh" bg="black" />
-          <Flex alignContent={"center"} justifyContent={"center"}>
-            <Stack direction="row" spacing={35}>
-              <Button
-                _hover={{ bg: "blue.300", textColor: "white" }}
-                my="10px"
-                colorScheme="blue"
-                variant="ghost"
-              >
-                About
-              </Button>
-              <Button
-                _hover={{ bg: "blue.300", textColor: "white" }}
-                my="10px"
-                colorScheme="blue"
-                variant="ghost"
-              >
-                Demo
-              </Button>
-              <Image boxSize="60px" objectFit="cover" src={logo} alt="Chatty" />
-              <Button
-                _hover={{ bg: "blue.300", textColor: "white" }}
-                my="10px"
-                colorScheme="blue"
-                variant="ghost"
-              >
-                Services
-              </Button>
-              <Button
-                _hover={{ bg: "blue.300", textColor: "white" }}
-                my="10px"
-                colorScheme="blue"
-                variant="ghost"
-              >
-                Contact
-              </Button>
-            </Stack>
-          </Flex>
+           <Dashboard />
           <Flex
             width={"100vw"}
-            height={"90vh"}
+            height={"80vh"}
             alignContent={"center"}
             justifyContent={"center"}
           >
@@ -94,6 +61,14 @@ import {
                 >
                   The next generation of Interview Prep
                 </Text>
+                
+
+              
+
+                <Link to="/problems" >
+                <Center>
+
+               
                 <Button
                   my={"20px"}
                   alignSelf={"center"}
@@ -108,6 +83,10 @@ import {
                 >
                   Try Chatty
                 </Button>
+                </Center>
+                </Link>
+            
+               
               </Stack>
             </Center>
           </Flex>

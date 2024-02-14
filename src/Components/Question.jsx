@@ -5,6 +5,7 @@ import logo from '../Images/logo.png';
 import { Card, CardBody } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
 import SpeechToText from './SpeechToText';
+import Dashboard from './Dashboard';
 
 function Question() {
   const { problemId } = useParams(); // Extract the dynamic parameter from the URL
@@ -32,44 +33,8 @@ function Question() {
   return (
     <Fragment>
       <Box h={'100vh'} bg="black">
-        <Box w="70vw" h="0vh" bg="black" />
-        <Flex alignContent="center" justifyContent="center">
-          <Stack direction="row" spacing={35}>
-            <Button
-              _hover={{ bg: 'blue.300', textColor: 'white' }}
-              my="10px"
-              colorScheme="blue"
-              variant="ghost"
-            >
-              About
-            </Button>
-            <Button
-              _hover={{ bg: 'blue.300', textColor: 'white' }}
-              my="10px"
-              colorScheme="blue"
-              variant="ghost"
-            >
-              Demo
-            </Button>
-            <Image boxSize="60px" objectFit="cover" src={logo} alt="Chatty" />
-            <Button
-              _hover={{ bg: 'blue.300', textColor: 'white' }}
-              my="10px"
-              colorScheme="blue"
-              variant="ghost"
-            >
-              Services
-            </Button>
-            <Button
-              _hover={{ bg: 'blue.300', textColor: 'white' }}
-              my="10px"
-              colorScheme="blue"
-              variant="ghost"
-            >
-              Contact
-            </Button>
-          </Stack>
-        </Flex>
+        <Dashboard />
+        
         <Flex width="100vw" height="90vh" alignContent="center" justifyContent="center">
           <Center>
           {text && (
