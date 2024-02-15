@@ -108,18 +108,16 @@ function SpeechToText({ title, question, user_code }) {
   return (
     <>
       
-  
-          
-          <Button
-            _hover={{ bg: 'blue.300', textColor: 'white' }}
-            my="10px"
-            mx="5px" // Added margin on the X-axis to create space between buttons
-            colorScheme="blue"
-             variant="solid"
-             onClick={() => setIsListening((prevState) => !prevState)}
-                    >
-                      Start Chatting
-            </Button>
+      <Button
+        _hover={{ bg: isListening ? 'red.300' : 'blue.300', textColor: 'white' }}
+        my="10px"
+        mx="5px"
+        colorScheme={isListening ? 'red' : 'blue'}
+        variant="solid"
+        onClick={() => setIsListening(prevState => !prevState)}
+        >
+        {isListening ? 'Stop Chatting' : 'Start Chatting'}
+      </Button>
             &nbsp;&nbsp; {/* Non-breaking spaces for extra spacing */}
 
             <Tooltip
