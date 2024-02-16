@@ -17,7 +17,7 @@ function playAudio() {
 
   // Set the source of the audio file (replace 'your_audio.mp3' with the actual filename)
   var audioSource = document.getElementById('audioSource');
-  audioSource.src = 'http://127.0.0.1:8080/static/output.mp3?v=' + new Date().getTime(); // Adjust the path based on your project structure
+  audioSource.src = 'https://tarunthatavarthi.pythonanywhere.com/static/output.mp3?v=' + new Date().getTime(); // Adjust the path based on your project structure
 
   // Load and play the audio
   audioPlayer.load();
@@ -55,7 +55,7 @@ function SpeechToText({ title, question, user_code }) {
           key3: question,
           key4: title,
         };
-        fetch('http://127.0.0.1:8080/fetchOpenAI', {
+        fetch('https://tarunthatavarthi.pythonanywhere.com/fetchOpenAI', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ function SpeechToText({ title, question, user_code }) {
               key1: data,
             };
 
-            fetch('http://127.0.0.1:8080/fetchAudio', {
+            fetch('https://tarunthatavarthi.pythonanywhere.com/fetchAudio', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

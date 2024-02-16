@@ -7,7 +7,7 @@ function ProblemSet() {
   const [allQuestions, setAllQuestions] = useState({});
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8080/problemset")
+    fetch("https://tarunthatavarthi.pythonanywhere.com/problemset")
       .then(response => response.json())
       .then(data => {
         setAllQuestions(data);
