@@ -59,7 +59,7 @@ import Dashboard from "./Dashboard";
                   fontSize="3xl"
                   fontWeight="extrabold"
                 >
-                  The next generation of Interview Prep
+                  Interactively Practice Technical Interviews
                 </Text>
                 
 
