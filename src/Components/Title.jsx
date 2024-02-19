@@ -44,15 +44,20 @@ import Dashboard from "./Dashboard";
           >
             <Center>
               <Stack spacing={3}>
+                <Center>
+
+               
                 <Text
                   whiteSpace="pre-line"
                   bgGradient="linear(to-l, #c0e6f0, #2f52a4)"
                   bgClip="text"
                   fontSize="6xl"
                   fontWeight="extrabold"
+                  
                 >
                   Welcome to Chatty
                 </Text>
+                </Center>
                 <Text
                   bgGradient="linear(to-l, #c0e6f0, #2f52a4)"
                   bgClip="text"
