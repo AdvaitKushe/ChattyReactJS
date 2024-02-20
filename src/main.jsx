@@ -4,6 +4,7 @@ import App from './App.jsx'
 import HotjarTracking from './HotjarTracking';
 
 import { Box, ChakraProvider } from "@chakra-ui/react";
+import HotjarTracking from './HotjarTracking';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
