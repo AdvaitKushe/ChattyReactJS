@@ -20,7 +20,7 @@ def home():
 
 @app.route('/fetchAudio', methods=['POST'] )
 def fetchAudio():
-    client = OpenAI(api_key="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")
+    client = OpenAI(api_key)
 
     request_data = request.get_json()
 
